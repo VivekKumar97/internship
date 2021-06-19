@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= user.name %> </h1>
+    <ul>
+        <li><b>Email: </b><%= user.email %> </li>
+        <li><b>Age: </b><%= user.age %> </li>
+        <li><b>Gender: </b><%= user.gender %> </li>
+    </ul>
+    <a href="/user/<%= user._id %>/edit">Edit</a>
+    <br>
+    
+    <a href="/user">All Users</a>
+    <br>
+
+    <form action="/user/<%= user._id%>?over=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+</body>
+</html>
